@@ -1,0 +1,17 @@
+module FinanceApp {
+  interface AuthService {
+    boolean register(in string username, in string password);
+    boolean login(in string username, in string password);
+  };
+
+  interface FinanceService {
+    boolean addTransaction(
+      in string username,
+      in string type,
+      in double amount,
+      in string note
+    );
+
+    string getTransactions(in string username);
+  };
+};
